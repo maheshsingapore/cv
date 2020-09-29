@@ -147,7 +147,20 @@
 				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
 
+
+			var url = 'http://newsapi.org/v2/top-headlines?country=sg&apiKey=' + 'd6fcf896b99b470f904c5d8a5a9e5ae7';
+
+			const myHeaders = new Headers()
+
+			myHeaders.append('access-control-allow-origin','*');
+			var req = new Request(url, {headers : myHeaders});
+			fetch(req)
+				.then(function(response) {
+					console.log(response.json());
+				})
+
 		</script>
+		<key>d6fcf896b99b470f904c5d8a5a9e5ae7</key>
 
 	</body>
 </html>
